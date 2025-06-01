@@ -1,8 +1,6 @@
 pipeline{
   agent any
-  tools{
-    python 'Python3'
-  }
+  
   stages{
     stage('set the environment')
     {
