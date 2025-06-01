@@ -19,6 +19,7 @@ pipeline{
       steps{
         sh '''
         . .venv/bin/activate
+        export PYTHONPATH=.
         pytest tests/
       '''
       }
@@ -28,6 +29,7 @@ pipeline{
       steps{
         sh'''
         . .venv/bin/activate
+        export PYTHONPATH=.
         coverage run -m pytest tests/
         coverage report
         coverage html
